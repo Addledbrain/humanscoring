@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    {% block stylesheets %}{% endblock %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <style>
+      h4 {
+        margin-top: 10px;
+      }
+      footer {
+        padding: 20px;
+      }
+      .col {
+        border-bottom: 1px solid black;
+        padding-bottom: 24px;
+        padding-top: 14px;
+      }
+      .col-3 {
+        background: paleturquoise;
+        padding-bottom: 25px;
+      }
+      #ui {
+        border-bottom: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navbar navbar-expand-md bg-dark navbar-dark">
+      <a class="navbar-brand" href="#">
+        <img src="https://test21.au.dk/tao/views/img/tao-logo.png?buster=3.2.0-RC2" alt="TAO Logo" id="tao-main-logo">
+      </a>
+
+        <h2 class="text-white font-weight-normal font-italic">OpenScoring</h2>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link text-light" href="{{url('admin')}}">Project Manager</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" href="{{url('login')}}">Login</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+      {% block body %}{% endblock %}
+      {% block javascripts %}{% endblock %}
+    <footer class="small bg-dark text-center text-white">
+          © 2013 - 2019 ·
+          <span class="tao-version">3.2.0-RC2</span> ·
+          <a class="text-light" href="http://taotesting.com" target="_blank"><u>Open Assessment Technologies S.A.</u></a>
+          · All rights reserved.
+          Operated By   <a class="text-light" href="mailto:jebu@edu.au.dk"><u>DPU</u></a>
+    </footer>
+  </body>
+</html>

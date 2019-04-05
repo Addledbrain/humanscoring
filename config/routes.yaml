@@ -1,0 +1,11 @@
+login:
+    path: /login
+    controller: App\Controller\LoginController::index
+
+test:
+    path: /test
+    controller: App\Controller\TestController::test
+
+admin:
+    path: /dashboard
+    controller: App\Controller\AdminController::admin

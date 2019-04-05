@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Human Scoring Login{% endblock %}
+{% block head %}{% endblock %}
+{% block body %}
+<style>
+  .form-control { max-width: 400px; }
+  .btn-primary { margin-top: 10px; margin-bottom: 10px; width: 120px; }
+</style>
+
+<div class="container text-center">
+  <div class="row">
+    <div class="col-4"></div>
+    <div class="col-4">
+      <form method="post">
+          {% if error %}
+              <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+          {% endif %}
+          <h1>Login</h1>
+          <label for="inputUsername"></label>
+          <input type="text" value="{{ last_username }}" name="username" id="inputUsername" class="form-control" placeholder="Eksempel" required autofocus>
+          <label for="inputPassword"></label>
+          <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Indtast kode" required>
+
+          <input type="hidden" name="_csrf_token"
+                 value="{{ csrf_token('authenticate') }}"
+          >
+
+          {#
+              Uncomment this section and add a remember_me option below your firewall to activate remember me functionality.
+              See https://symfony.com/doc/current/security/remember_me.html
+
+              <div class="checkbox mb-3">
+                  <label>
+                      <input type="checkbox" name="_remember_me"> Remember me
+                  </label>
+              </div>
+          #}
+
+          <small><a href="#">Glemt kodeord?</a></small><br>
+          <button class="btn btn-primary" type="submit">
+              Fortsæt
+          </button>
+        <div class="col-4"></div>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}

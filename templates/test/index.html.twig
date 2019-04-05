@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Human Scoring - Test{% endblock %}
+
+{% block body %}
+<div class ="container-fluid">
+  <div class="row">
+    <div class="col text-center bg-light">
+      <h3>Tests</h3>
+      <a href="#" class="btn btn-primary shadow-sm" role="button">Campingpladsen</a>
+      <a href="#" class="btn btn-primary shadow-sm" role="button">Forlystelsespark</a>
+      <a href="#" class="btn btn-primary shadow-sm" role="button">Museum</a>
+      <a href="#" class="btn btn-primary shadow-sm" role="button">Teater</a>
+      <a href="#" class="btn btn-primary shadow-sm" role="button">Spørgeskema</a>
+    </div>
+  </div>
+  <div class="row" id="ui">
+    <div class="col-9" id="showpci"></div>
+    <div class="col-3 text-center">
+      <h4>Score</h4>
+      <form id="pciscore">
+      <h5>Kategori 1</h5>
+        <label class="radio-inline"><input type="radio" name="kat1" value="score1">1</label>
+        <label class="radio-inline"><input type="radio" name="kat1" value="score2">2</label>
+        <label class="radio-inline"><input type="radio" name="kat1" value="score3">3</label>
+        <label class="radio-inline"><input type="radio" name="kat1" value="score4">4</label>
+      <h5>Kategori 2</h5>
+        <label class="radio-inline"><input type="radio" name="kat2" value="score1">1</label>
+        <label class="radio-inline"><input type="radio" name="kat2" value="score2">2</label>
+        <label class="radio-inline"><input type="radio" name="kat2" value="score3">3</label>
+        <label class="radio-inline"><input type="radio" name="kat2" value="score4">4</label>
+      <h5>Kategori 3</h5>
+        <label class="radio-inline"><input type="radio" name="kat3" value="score1">1</label>
+        <label class="radio-inline"><input type="radio" name="kat3" value="score2">2</label>
+        <label class="radio-inline"><input type="radio" name="kat3" value="score3">3</label>
+        <label class="radio-inline"><input type="radio" name="kat3" value="score4">4</label>
+        <br>
+        <input type="submit" class="btn btn-success" value="Flag">
+        <input type="submit" class="btn btn-primary" value="Næste">
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}
