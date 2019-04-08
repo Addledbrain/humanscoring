@@ -4,8 +4,8 @@ login:
 
 test:
     path: /test
-    controller: App\Controller\TestController::test
+    controller: App\Controller\TestController::index
 
 admin:
     path: /dashboard
-    controller: App\Controller\AdminController::admin
+    controller: App\Controller\DashboardController::index
