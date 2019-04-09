@@ -9,3 +9,7 @@ test:
 admin:
     path: /dashboard
     controller: App\Controller\DashboardController::index
+
+user:
+    path: /user
+    controller: App\Controller\UserController::index
